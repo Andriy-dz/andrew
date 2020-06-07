@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Task4</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  $(document).ready(function() {
+  $("#style").click(function(){
+  $("div").filter(".fruit").css("background-color", "red");
+  $("div").filter(".vegetable").css("background-color", "green");
+  $("div").filter(function(index){
+     if(index%3==0){
+        $(this).css("color", "yellow");
+     }
+  });
+  });
+});
+</script>
+</head>
+<body>
+<b>Демонстрація методу filter()</b><br>
+<br>
+<br>
+<div class="fruit">apple</div> 
+<div class="vegetable">tomato</div> 
+<div class="fruit">pineapple</div> 
+<div class="vegetable">potato</div> 
+<div class="fruit">strawberry</div>
+<div class="vegetable">garlic</div>  
+<div class="fruit">melon</div> 
+<div class="vegetable">onion</div> 
+<div class="fruit">watermelon</div> 
+<div class="vegetable">cucumber</div> 
+<div class="vegetable">parsley</div> 
+<div class="fruit">blackberry</div> 
+<div class="vegetable">carrot</div> 
+<div class="fruit">coconat</div> 
+<div class="vegetable">broccoli</div> 
+<br>
+<br>
+<input type="button" id="style" value="Увімкнути стиль">
+</html>

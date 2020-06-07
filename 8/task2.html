@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>task2</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+  $ (document).ready(function() { 
+  $("p").insertBefore("#girl");
+  $( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
+  image_height=$("img").innerHeight();
+   $("#innerHeight").click(function(){
+    alert("Inner height of div: " + $("img").innerHeight());
+  });
+   $("#outerHeight").click(function(){
+    alert("Outer height of div: " + $("img").outerHeight());
+  });
+});
+</script>
+</head>
+<body>
+<b>Демонстрація методу .insertBefore()</b><br>
+<div id="girl">This is my girlfriend Tifani!</div>
+<p>Hello Friend</p>
+<br>
+<b>Демонстрація методу .detach()</b><br>
+<p>Hello</p>
+how are
+<p>you?</p>
+<button>Attach/detach paragraphs</button>
+<br>
+<b>Демонстрація методу innerHeight()</b><br>
+<img src="image1.png" border="2px" id="pic" height="600" width="300">
+<div id="image"></div>
+<input type="button" id="innerHeight" value="Click">
+<br>
+<b>Демонстрація методу outerHeight()</b><br>
+<input type="button" id="outerHeight" value="Click">
+</body>
+</html>

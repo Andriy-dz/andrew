@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Task3</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+   $(document).ready(function() {
+      $("#each").click(function() {
+  $("li.fruit").each(function() {
+   alert($(this).text())
+   $("li.fr").nextAll().css({"background-color": "green"});
+   var len = $( ".light" ).siblings()
+  .css( "color", "brown" )
+  .length;  
+  $( "p" ).find( "span" ).css( "color",
+  "green" );
+  $( "li.item-a" ).offsetParent().css( "background-color", "blue" );
+});
+});
+});
+</script>
+</head>
+<body>
+<b>Метод each()</b><br>
+<ul>Fruits:
+<li class="fruit">Strawberry</li>
+<li class="fruit">Pineapple</li>
+<li class="fruit">Pear</li>
+<li class="fruit">Blackberry</li>
+<br>
+<input type="button" id="each" value="Click to watch a list of fruits and launch other methods">
+<div id="fruit"></div>
+<br>
+</ul>
+<br>
+<b>Метод nextAll()</b><br>
+<ul>Fruits:
+<li class="fr">Apple</li>
+<li>Melon</li>
+<li>Watermelon</li>
+<li>Rasberry</li>
+<li>Blueberry</li>
+</ul>
+<br>
+<b>Метод .siblings()</b><br>
+<ul>Fruits:
+  <li class="light">Apricot</li>
+  <li>Melon</li>
+</ul>
+<ul>
+   <li class="light">Banana</li>
+  <li>Blackcurrant</li>
+</ul>
+<ul>
+  <li>Carambola</li>
+  <li class="light">Cherries</li>
+  <li>Clementine</li>
+</ul>
+<br>
+<b>Метод find()</b><br>
+<p><span>Hi</span>, friend</p>
+<p>Hi <span>Michael</span></p>
+</ul>
+<br>
+<b>Метод offsetParent()</b><br>
+<ul class="level-1">
+  <li class="item-i">I</li>
+  <li class="item-ii" style="position: relative;">II
+    <ul class="level-2">
+      <li class="item-a">A</li>
+      <li class="item-b">B
+        <ul class="level-3">
+          <li class="item-1">1</li>
+          <li class="item-2">2</li>
+          <li class="item-3">3</li>
+        </ul>
+      </li>
+      <li class="item-c">C</li>
+    </ul>
+  </li>
+  <li class="item-iii">III</li>
+</ul>
+</html>
+<br>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>task1</title>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+  $ (document).ready(function() { 
+  $( "#task1" ).html("Text that was written by html():<b>Hello World</b>");
+  $("#task2").css({"background-color": "yellow", "font-size": "200%"});
+  $("#task3").click(function(){
+    $("#val").val("Five");
+	});
+   id_im=$("img").attr("id");
+   $("#image").html("Значення id="+id_im);
+   $("img").attr("width","3");
+   $("img").attr({"title":"Це спливаюча підказка!","width":"300",});
+  $("#task4").click(function(){
+    $("img").attr("width",function(index, current_value_width){
+      return ++current_value_width;
+    });
+  });
+   $("img").removeAttr("alt");
+   alt_text=$("img").attr("alt");
+   $("#image2").html(alt_text);
+   })
+</script>
+</head>
+<body>
+<b>Демонстрація методу html()</b><br>
+<div id="task1"></div>
+<br>
+
+<b>Демонстрація методу css()</b><br>
+<div id="task2">
+Background color is yellow
+</div>
+<br>
+
+<b>Демонстрація методу val()</b><br>
+<input type="text" id="val">
+<input type="button" value="Click" id="task3"><br>
+<br>
+
+<b>Демонстрація методу attr()</b><br>
+<img src="image1.png" id="pic" alt="Альтернативний текст">
+<div id="image"></div>
+<input type="button" id="task4" value="Збільшення картинки">
+</body>
+</html>
