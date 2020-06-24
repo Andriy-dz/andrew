@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            newObj = new Object();
+            newObj.greetingMorn = "Good Morning!";
+            newObj.greetingEve = "Good Evening!";
+            $("#btn1").click(function() {
+                $("div").data(newObj);
+            });
+            $("#btn2").click(function() {
+                alert($("div").data("greetingEve"));
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="btn1">Add element</button><br>
+    <button id="btn2">get the element</button>
+
+    <div></div>
+
+</body>
+
+</html>

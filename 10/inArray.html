@@ -1,0 +1,38 @@
+<!-- Search for a specified value within an array and return its index (or -1 if not found). -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.inArray demo</title>
+    <style>
+        div {
+            color: blue;
+        }
+        
+        span {
+            color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <div>3 found at <span></span></div>
+    <div>1 found at <span></span></div>
+    <div>5 not found, so <span></span></div>
+    <div>0 not found, so <span></span></div>
+
+    <script>
+        var arr = [1, 2, 3, 4];
+        var $spans = $("span");
+        $spans.eq(0).text(jQuery.inArray(3, arr));
+        $spans.eq(1).text(jQuery.inArray(1, arr));
+        $spans.eq(2).text(jQuery.inArray(5, arr));
+        $spans.eq(3).text(jQuery.inArray(0, arr));
+    </script>
+
+</body>
+
+</html>

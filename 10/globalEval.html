@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery demo</title>
+    <style>
+        label {
+            display: block;
+            margin: .5em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+</head>
+
+<body>
+    <p>
+        Выполняет заданный скрипт в глобальной области видимости. Отличие от стандартного javascript-метода eval() заключается в глобальной области выполнения, что является важным нюансом, например, когда нужно выполнить динамически подгруженную библиотеку.
+    </p>
+    <script>
+        function test() {
+            jQuery.globalEval("var newVar = true;")
+        }
+        console.log(test()); // newVar===true
+    </script>
+</body>
+
+</html>

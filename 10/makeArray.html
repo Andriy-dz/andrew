@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery.makeArray demo</title>
+    <style>
+        div {
+            color: black;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+
+    <script>
+        var elements = document.getElementsByTagName("div");
+        var array = jQuery.makeArray(elements);
+        array.reverse();
+        $(array).appendTo(document.body);
+    </script>
+
+</body>
+
+</html>

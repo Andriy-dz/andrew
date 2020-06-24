@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Температура</title>
+</head>
+
+<body>
+    <h2>Введіть номер завдання:</h2>
+    <ol>
+        <li>Oбчислення максимальної температури</li>
+        <li>Oбчислення мінімальної температури</li>
+        <li>Oбчислення середньої температури</li>
+    </ol>
+    <form action="task6.php" method="POST">
+        <label for="choice">Ваш вибір</label>
+        <input type="text" id="choice" name="n"><br>
+        <h2>Введіть температуру</h2>
+        <label for="t1">t<sup>o</sup></label>
+        <input type="text" id="t1" name="temp[]"><br>
+        <label for="t2">t<sup>o</sup></label>
+        <input type="text" id="t2" name="temp[]"><br>
+        <label for="t3">t<sup>o</sup></label>
+        <input type="text" id="t3" name="temp[]"><br>
+        <input type="submit" value="Обчислити">
+    </form>
+</body>
+
+</html>

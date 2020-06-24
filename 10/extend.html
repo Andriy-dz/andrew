@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+    <div id="log"></div>
+
+    <script>
+        var objectOne = {
+            student: 1,
+            studentOne: {
+                course: 3,
+                age: 20
+            },
+            studentGroup: 30 
+        };
+        var objectTwo = {
+            Music: {
+                Rock: 1
+            },
+            Opera: 0
+        };
+
+        $.extend(objectOne, objectTwo);
+
+        $("#log").append(JSON.stringify(objectOne));
+    </script>
+
+</body>
+
+</html>
